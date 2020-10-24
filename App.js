@@ -1,16 +1,16 @@
 import * as React from "react";
-import { View, Text } from "react-native";
+import {SafeAreaView, StatusBar, View, Text } from "react-native";
+import FlatListDemo from './FlatListDemo';
 
-export default function App() {
-  return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Universal React with Expo</Text>
-    </View>
+const App: () => React$Node = () => {
+  return ( 
+    <>
+      <StatusBar barStyle="dark-content" />
+      <SafeAreaView style={{flex: 1}}>
+        <FlatListDemo />
+      </SafeAreaView>
+    </>
   );
-}
+};
+
+export default App;
